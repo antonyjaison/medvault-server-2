@@ -1,0 +1,21 @@
+{
+  "name": "medvault",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app"
+  },
+  "author": "Antony Jaison",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.23.0",
+    "@google/generative-ai": "^0.12.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
