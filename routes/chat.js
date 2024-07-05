@@ -5,7 +5,7 @@ import { Router } from 'express'
 
 const chatRouter = Router();
 
-const apiKey = 'AIzaSyB9eTEl-szHeULqqhV2yFqyoKMOUvCiW34';
+const apiKey = 'AIzaSyDalBduebXIjxQPxmbYYKhyAOtUM7hv6KA'
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({

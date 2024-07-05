@@ -7,6 +7,7 @@ import getImageBase64 from './utils/base64.js';
 import prescriptionRoutes from './routes/prescriptionRouter.js';
 import chatRoutes from './routes/chat.js';
 import emergencyRoutes from './routes/emergencyContact.js'
+import emergencyRoutes2 from './routes/emergencyContacts2.js'
 
 dotenv.config();
 
@@ -31,6 +32,9 @@ app.use('/api/prescription', prescriptionRoutes);
 app.use("/api/chat", chatRoutes)
 
 app.use("/api/emergency", emergencyRoutes)
+
+app.use("/api/emergency2", emergencyRoutes2)
+
 
 // Basic route
 app.get('/hello', (req, res) => {

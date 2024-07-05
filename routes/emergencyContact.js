@@ -15,24 +15,24 @@ emergencyContactRouter.post('/send-emergency', async (req, res) => {
     const latitude = userDetails.location.coords.latitude
     const mapUrl = `https://www.google.com/maps?q=${latitude},${longitude}`
     const alertMessage = `
-    🚨 Emergency Alert from MedVault 🚨
-    
-    Dear Emergency Contact,
-    
-    This is an automated alert regarding ${name}. They have activated an emergency SOS signal indicating they may need immediate assistance.
-    
-    Current Location:
-    ${mapUrl}
-    
-    Latitude: ${latitude}
-    Longitude: ${longitude}
-    
-    Please contact them as soon as possible to ensure their safety. If you are unable to reach them, consider notifying local emergency services and provide them with the location details above.
-    
-    Thank you for your prompt attention to this urgent matter.
-    
-    Sincerely,
-    MedVault Emergency Alert System
+        🚨 Emergency Alert from MedVault 🚨
+        
+        Dear Emergency Contact,
+        
+        This is an automated alert regarding ${name}. They have activated an emergency SOS signal indicating they may need immediate assistance.
+        
+        Current Location:
+        ${mapUrl}
+        
+        Latitude: ${latitude}
+        Longitude: ${longitude}
+        
+        Please contact them as soon as possible to ensure their safety. If you are unable to reach them, consider notifying local emergency services and provide them with the location details above.
+        
+        Thank you for your prompt attention to this urgent matter.
+        
+        Sincerely,
+        MedVault Emergency Alert System
     `;
 
     const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH)
@@ -54,6 +54,5 @@ emergencyContactRouter.post('/send-emergency', async (req, res) => {
             console.error('Error sending message:', error)
         }
     })
-
 })
 export default emergencyContactRouter
